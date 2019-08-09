@@ -14,10 +14,12 @@ public class User {
 	private Long memberNumber;
 	
 	public User(Long id, String name, Long memberNumber) {
-		super();
-		this.id= id;
+		this.id = id;
 		this.name = name;
 		this.memberNumber = memberNumber;
+	}
+	
+	public User() {
 	}
 
 	public String getName() {

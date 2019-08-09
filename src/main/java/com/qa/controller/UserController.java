@@ -41,17 +41,17 @@ public class UserController {
 	}
 
 	@GetMapping("/getUser/{id}")
-	public ResponseEntity<User> getAccount(@PathVariable Long id) {
+	public ResponseEntity<User> getUser(@PathVariable Long id) {
 		return new ResponseEntity<>(service.getUser(id), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/deleteAccount")
-	public String deleteAccount(User user) {
+	@DeleteMapping("/deleteUser")
+	public String deleteUser(User user) {
 		return service.deleteUser(user);
 	}
 	
-	@PostMapping("/addAccount")
-	public ResponseEntity<User> addAccount(@RequestBody User user) {
+	@PostMapping("/addUser")
+	public ResponseEntity<User> addUser(@RequestBody User user) {
 		User newUser = service.addUser(user);
 		return new ResponseEntity<>(newUser, HttpStatus.CREATED);
 	}
